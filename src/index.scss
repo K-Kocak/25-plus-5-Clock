@@ -1,0 +1,100 @@
+
+
+$bodybgcolor: #10732C;
+$textcolor: white;
+$buttoncolor: #031508;
+$buttonoutlinecolor: #138332;
+$buttonhovercolor: #51E67B;
+$buttonhoverbackgroundcolor: #0C511F;
+$timerbordercolor: black;
+$timerbackgroundcolor: #86E18A;
+$timertextcolor: black;
+
+body {
+  background: $bodybgcolor;
+  color: $textcolor;
+  font-size: 34px;
+  text-align: center;
+  
+  #root {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: top;
+    margin-top: 150px;
+
+    .main-title {
+      font-size: 50px;
+      margin-bottom: 40px;
+      font-weight: 700;            
+    }
+    
+    .length-control {
+      width: 280px;
+      border: 2px solid black;   
+      padding: 5px 0px 5px 0px;
+      margin: 0px 1px;
+      background: $timerbackgroundcolor;
+      color: $timertextcolor;
+      border-radius: 15px;
+      
+      #break-label, #session-label {
+        margin-bottom: 15px;
+      }
+    }
+    
+    button {
+      background: $buttoncolor;
+      outline: $buttonoutlinecolor;
+      border: 0px solid $buttonoutlinecolor;
+      padding: 7px;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      color: $buttonhovercolor;
+      background: $buttonhoverbackgroundcolor;
+    }
+    
+    .btn-level,
+    .length-control {
+      display: inline-block;
+      
+      .btn-level:nth-child(3) {
+        width: 50px;
+      }
+    }
+    
+    .timer {
+      border: 7px solid $timerbordercolor;
+      margin: 25px auto 15px auto;
+      width: 250px;
+      height: 170px;
+      border-radius: 30px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $timerbackgroundcolor;
+      color: $timertextcolor;
+      font-weight: 600;
+
+      .timer-wrapper {
+        position: absolute;
+        padding-top: 5px;
+      }
+      
+      #time-left {
+        font-size: 80px;
+      }
+    }
+    
+    #start_stop{
+      margin-right: 10px;
+    }
+    
+  }
+}
+
